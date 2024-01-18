@@ -224,7 +224,45 @@ th {
   color: var(--title);
 }
 
+
+
 /* Optional styling */
 
 /* tr:nth-child(odd) {
   background-color: #f9f9f9; /* Add zebra striping */
+
+
+.vids {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 5rem;
+  iframe {
+    border-radius: 1.3rem;
+  }
+
+  .vid {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 100%;
+    
+    gap: 2rem;
+    padding: 1.2rem;
+    /* background: rgba(255, 255, 255, 0.19);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8.5px);
+    -webkit-backdrop-filter: blur(8.5px); */
+    transition: transform 0.2s ease-in;
+    h4 {
+      color: var(--secondary);
+      font-family: 'Akira';
+      text-align: center;
+      font-size: 1.5rem;
+    }
+  }
+  .vid:hover {
+    transform: scale(1.05);
+  }
+}
