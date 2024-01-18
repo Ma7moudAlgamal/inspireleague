@@ -130,7 +130,7 @@ nav li:hover {
   }
 }
 
-.cards {
+.match-cards {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -291,4 +291,53 @@ th {
   .pic {
     justify-self: center;
   }
+}
+
+
+.members-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1.4rem;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  width: 100%;
+}
+
+.member-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.19);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8.5px);
+  -webkit-backdrop-filter: blur(8.5px);
+  padding: 1.1rem;
+  transition: transform 0.2s ease-in;
+
+  img {
+    border-radius: 50%;
+    padding: 1.2rem;
+    flex-grow: 2;
+  }
+
+  .member-name {
+    color: var(--title);
+    font-family: 'Akira';
+    padding: 1.1rem;
+    font-size: 1.3rem;
+  }
+
+  .member-role {
+    color: var(--secondary);
+    font-family: 'Montserrat';
+    padding: 1.1rem;
+    font-weight: bolder;
+  }
+}
+
+.member-card:hover {
+  transform: scale(1.05);
 }
