@@ -86,31 +86,41 @@ nav li:hover {
 .main {
   height: 100vh;
   padding: 10rem;
-  display: flex;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto 1fr;
+  justify-content: center;
+  align-items: center;
 
   .main-image {
     /* max-width: 30%; */
+    grid-row: 1 / span 2;
+    grid-column: 2;
+    object-fit: none;
+    justify-self: center;
+    align-self: center;
+    width: 100%;
+    height: 100%;
   }
-  .welcome {
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    color: rgb(200, 233, 255);
-    font-size: 1.7rem;
+
+  h1 {
+    color: var(--title);
+    font-size: 5rem;
+    margin-bottom: 2rem;
+    font-family: "Akira";
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  p {
     font-family: "Montserrat", sans-serif;
-    padding: 1.7rem;
-
-    h1 {
-      font-size: 5rem;
-      margin-bottom: 7rem;
-      font-family: "Akira";
-    }
-
-    p {
-      /* max-width: 70%; */
-      color: #f2f2f2;
-    }
+    font-size: 1.7rem;
+    /* max-width: 70%; */
+    color: var(--secondary);
+    grid-column: 1;
+    grid-row: 2;
+    justify-self: start;
+    align-items: start;
   }
 }
 
@@ -198,7 +208,6 @@ table:hover {
   transform: scale(1.05);
 }
 
-
 td {
   padding: 1.25rem; /* Add padding to cells */
   /* border: 1px solid #ccc; Add borders to cells */
@@ -215,7 +224,7 @@ th {
   /* box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(8.5px);
   -webkit-backdrop-filter: blur(8.5px);  */
-  padding: .5rem 1rem; /* Add padding to cells */
+  padding: 0.5rem 1rem; /* Add padding to cells */
   text-align: center;
 
   font-weight: bold; /* Make header text bold */
@@ -224,13 +233,10 @@ th {
   color: var(--title);
 }
 
-
-
 /* Optional styling */
 
 /* tr:nth-child(odd) {
   background-color: #f9f9f9; /* Add zebra striping */
-
 
 .vids {
   display: flex;
@@ -246,7 +252,7 @@ th {
     flex-direction: column;
     justify-content: space-evenly;
     width: 100%;
-    
+
     gap: 2rem;
     padding: 1.2rem;
     /* background: rgba(255, 255, 255, 0.19);
@@ -257,12 +263,25 @@ th {
     transition: transform 0.2s ease-in;
     h4 {
       color: var(--secondary);
-      font-family: 'Akira';
+      font-family: "Akira";
       text-align: center;
       font-size: 1.5rem;
     }
   }
   .vid:hover {
     transform: scale(1.05);
+  }
+}
+
+.pics {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  width: 100%;
+
+  .pic {
+    justify-self: center;
   }
 }
