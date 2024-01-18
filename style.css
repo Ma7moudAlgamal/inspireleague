@@ -15,6 +15,7 @@
 }
 
 body {
+  font-family: "Montserrat";
   background: rgb(1, 12, 102);
   background: linear-gradient(
     90deg,
@@ -171,3 +172,59 @@ nav li:hover {
 .card:hover {
   transform: scale(1.04);
 }
+
+.tables {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 4rem;
+}
+
+table {
+  /* border-radius: 1.3rem; */
+  border-collapse: collapse; /* Combine table borders */
+  /* width: 100%; Make the table full width */
+  background-color: var(--secondary);
+  border: none;
+  background: rgba(255, 255, 255, 0.19);
+  border-radius: 1.2rem;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8.5px);
+  -webkit-backdrop-filter: blur(8.5px);
+  transition: transform 0.2s ease-in;
+}
+
+table:hover {
+  transform: scale(1.05);
+}
+
+
+td {
+  padding: 1.25rem; /* Add padding to cells */
+  /* border: 1px solid #ccc; Add borders to cells */
+  text-align: center;
+  /* border-radius: 1.2rem; */
+  color: var(--secondary);
+  height: 3rem;
+}
+
+th {
+  /* background-color: #eee; Add background color to header cells */
+  /* background: rgba(255, 255, 255, 0.19);
+  /* border-radius: 16px; */
+  /* box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8.5px);
+  -webkit-backdrop-filter: blur(8.5px);  */
+  padding: .5rem 1rem; /* Add padding to cells */
+  text-align: center;
+
+  font-weight: bold; /* Make header text bold */
+  border-radius: 0rem;
+  border: none;
+  color: var(--title);
+}
+
+/* Optional styling */
+
+/* tr:nth-child(odd) {
+  background-color: #f9f9f9; /* Add zebra striping */
