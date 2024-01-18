@@ -78,11 +78,10 @@ nav li:hover {
 }
 
 .main {
-  height: 100vh;
   padding: 10rem;
   display: flex;
   justify-content: space-around;
-
+  padding-bottom: 0;
   .main-image {
     border-radius: 0.1rem;
     border-color: white;
@@ -94,8 +93,7 @@ nav li:hover {
     color: #f2f2f2;
     font-size: 1.7rem;
     font-family: "Montserrat", sans-serif;
-    padding: 1.7;
-
+    padding: 1.7em;
     h1 {
       /* font-size: ; */
       margin-bottom: 2rem;
@@ -114,11 +112,12 @@ nav li:hover {
   align-items: center;
   justify-content: center;
   transition: transform 0.3s;
+  margin-bottom: 2em;
 
   /* From https://css.glass */
-  background: rgba(255, 255, 255, 0.19);
+  background: rgba(255, 255, 255, 0.4);
   border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(8.5px);
   -webkit-backdrop-filter: blur(8.5px);
 
