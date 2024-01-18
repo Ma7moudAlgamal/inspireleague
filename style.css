@@ -138,9 +138,11 @@ nav li:hover {
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(8.5px);
   -webkit-backdrop-filter: blur(8.5px);
+  height: 200px;
 
   .text-container {
     padding: 1.25rem;
+    width: 50%;
 
     h2 {
       color: var(--secondary);
@@ -158,6 +160,12 @@ nav li:hover {
       letter-spacing: 0.68rem;
       color: var(--secondary);
     }
+  }
+
+  img {
+    width: 25%; /* Adjust width as needed */
+    height: 100%;
+    object-fit: scale-down;
   }
 }
 .card:hover {
