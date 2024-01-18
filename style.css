@@ -10,7 +10,12 @@
 }
 
 body {
-  background-color: #010c66;
+  background: rgb(1, 12, 102);
+  background: linear-gradient(
+    90deg,
+    rgba(1, 12, 102, 1) 0%,
+    rgba(47, 61, 168, 1) 100%
+  );
 }
 
 section {
@@ -22,7 +27,7 @@ section {
   font-family: "Akira";
   color: #f2f2f2;
   text-align: center;
-  margin: 3rem;
+  margin: 4rem;
 }
 
 nav {
@@ -61,12 +66,12 @@ nav li {
   a {
     text-decoration: none;
     color: #000;
-    transition: 0.3s ease-out;
+    transition: 0.15s ease-out;
   }
 }
 
-.links:hover {
-  transform: scale(1.1);
+nav li:hover {
+  transform: scale(1.05);
   a {
     color: #07178e;
   }
@@ -110,6 +115,13 @@ nav li {
   justify-content: center;
   transition: transform 0.3s;
 
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.19);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8.5px);
+  -webkit-backdrop-filter: blur(8.5px);
+
   .text-container {
     padding: 1.25rem;
 
@@ -125,9 +137,9 @@ nav li {
       text-align: center;
       font-family: "Montserrat", sans-serif; /* Assuming Akira font is accessible */
       font-weight: 800;
+      letter-spacing: 0.68rem;
     }
   }
-
 }
 .card:hover {
   transform: scale(1.04);
