@@ -1,6 +1,5 @@
 @import url(./brackets.css);
 
-
 @font-face {
   font-family: "Akira"; /* Choose a name for your font */
   src: url("/fonts/Akira.otf"); /* Path to the TTF file */
@@ -103,36 +102,39 @@ nav li:hover {
   justify-content: center;
   align-items: center;
 
-  .main-image {
-    /* max-width: 30%; */
-    grid-row: 2;
-    grid-column: 2;
-    object-fit: none;
-    justify-self: center;
-    align-self: center;
-    width: 100%;
-    height: 100%;
-  }
+  
 
-  h1 {
-    color: var(--title);
-    font-size: 5rem;
-    margin-bottom: 2rem;
-    font-family: "Akira";
-    grid-column: span 2;
-    grid-row: 1;
-  }
+}
 
-  p {
-    font-family: "Montserrat", sans-serif;
-    font-size: 1.7rem;
-    /* max-width: 70%; */
-    color: var(--secondary);
-    grid-column: 1;
-    grid-row: 2;
-    justify-self: start;
-    align-items: start;
-  }
+.main-image {
+  /* max-width: 30%; */
+  grid-row: 2;
+  grid-column: 2;
+  object-fit: none;
+  justify-self: center;
+  align-self: center;
+  width: 100%;
+  height: 100%;
+}
+
+.main h1 {
+  color: var(--title);
+  font-size: 5rem;
+  margin-bottom: 2rem;
+  font-family: "Akira";
+  grid-column: span 2;
+  grid-row: 1;
+}
+
+.main p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.7rem;
+  /* max-width: 70%; */
+  color: var(--secondary);
+  grid-column: 1;
+  grid-row: 2;
+  justify-self: start;
+  align-items: start;
 }
 
 .match-cards {
@@ -194,7 +196,6 @@ nav li:hover {
   transform: scale(1.04);
 }
 
-
 .tables {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -230,12 +231,6 @@ td {
 }
 
 th {
-  /* background-color: #eee; Add background color to header cells */
-  /* background: rgba(255, 255, 255, 0.19);
-  /* border-radius: 16px; */
-  /* box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(8.5px);
-  -webkit-backdrop-filter: blur(8.5px);  */
   padding: 1.3rem 1rem; /* Add padding to cells */
   text-align: center;
 
@@ -258,31 +253,33 @@ th {
   iframe {
     border-radius: 1.3rem;
   }
+}
 
-  .vid {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    width: 100%;
+.vid {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 100%;
 
-    gap: 2rem;
-    padding: 1.2rem;
-    /* background: rgba(255, 255, 255, 0.19);
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(8.5px);
-    -webkit-backdrop-filter: blur(8.5px); */
-    transition: transform 0.2s ease-in;
-    h4 {
-      color: var(--secondary);
-      font-family: "Akira";
-      text-align: center;
-      font-size: 1.5rem;
-    }
-  }
-  .vid:hover {
-    transform: scale(1.05);
-  }
+  gap: 2rem;
+  padding: 1.2rem;
+  /* background: rgba(255, 255, 255, 0.19);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8.5px);
+  -webkit-backdrop-filter: blur(8.5px); */
+  transition: transform 0.2s ease-in;
+}
+
+.vid h4 {
+  color: var(--secondary);
+  font-family: "Akira";
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.vid:hover {
+  transform: scale(1.05);
 }
 
 .pics {
@@ -293,10 +290,9 @@ th {
   gap: 1.5rem;
   width: 7rem;
   padding: 2rem;
-
-  .pic {
-    justify-self: center;
-  }
+}
+.pic {
+  justify-self: center;
 }
 
 .members-cards {
@@ -321,26 +317,26 @@ th {
   -webkit-backdrop-filter: blur(8.5px);
   padding: 1.1rem;
   transition: transform 0.2s ease-in;
+}
 
-  img {
-    border-radius: 50%;
-    padding: 1.2rem;
-    flex-grow: 2;
-  }
+.member-card img {
+  border-radius: 50%;
+  padding: 1.2rem;
+  flex-grow: 2;
+}
 
-  .member-name {
-    color: var(--title);
-    font-family: "Akira";
-    padding: 1.1rem;
-    font-size: 1.3rem;
-  }
+.member-name {
+  color: var(--title);
+  font-family: "Akira";
+  padding: 1.1rem;
+  font-size: 1.3rem;
+}
 
-  .member-role {
-    color: var(--secondary);
-    font-family: "Montserrat";
-    padding: 1.1rem;
-    font-weight: bolder;
-  }
+.member-role {
+  color: var(--secondary);
+  font-family: "Montserrat";
+  padding: 1.1rem;
+  font-weight: bolder;
 }
 
 .member-card:hover {
@@ -407,7 +403,7 @@ th {
     align-self: center;
     width: 5rem;
     object-fit: cover;
-    /* content: url("./images/logo\ -p.png"); */
+    content: url("./images/logo\ -p.png");
   }
 
   .section-title {
@@ -425,55 +421,53 @@ th {
     padding: 5rem; /* Reduce padding */
     grid-template-columns: 1fr; /* Switch to single-column layout */
     grid-template-rows: auto auto;
+  }
 
-    .main-image {
-      grid-column: 1;
-      grid-row: 1;
-      width: 5rem;
-      height: auto; /* Adjust height as needed */
-      display: none;
-    }
+  .main-image {
+    grid-column: 1;
+    grid-row: 1;
+    width: 5rem;
+    height: auto; /* Adjust height as needed */
+    display: none;
+  }
 
-    h1 {
-      grid-column: 1;
-      grid-row: 1;
-      font-size: 2.5rem;
-    }
+  .main h1 {
+    grid-column: 1;
+    grid-row: 1;
+    font-size: 2.5rem;
+  }
 
-    p {
-      grid-column: 1;
-      grid-row: 3;
-      width: 100%; /* Take full width */
-    }
+  .main p {
+    grid-column: 1;
+    grid-row: 3;
+    width: 100%; /* Take full width */
   }
 
   /* Card section adjustments */
 
-
   .card {
     width: 100%; /* Take full width */
-
-    .text-container {
-      width: 100%;
-      padding: 1.2rem;
-
-      h2 {
-        font-size: 1.7rem;
-        padding: 1.6rem;
-        font-family: 'Akira';
-      }
-
-      p {
-        font-size: 1rem;
-        line-height: 2rem;
-        font-family: 'Montserrat';
-        span {
-          display: none;
-        }
-      }
-    }
   }
 
+  .text-container {
+    width: 100%;
+    padding: 1.2rem;
+  }
+
+  .text-container h2 {
+    font-size: 1.7rem;
+    padding: 1.6rem;
+    font-family: "Akira";
+  }
+
+  .text-container p {
+    font-size: 1rem;
+    line-height: 2rem;
+    font-family: "Montserrat";
+    span {
+      display: none;
+    }
+  }
 
   .card img {
     display: none;
@@ -515,17 +509,14 @@ th {
 
   .member-card {
     width: 100%;
-    /* padding: .9rem; */
-
-   .member-name {
+  }
+  .member-name {
     font-size: 1.2rem;
-    font-family: 'Akira';
+    font-family: "Akira";
+  }
 
-   }
-
-   .member-role {
+  .member-role {
     font-size: 1rem;
-    font-family: 'Montserrat';
-   }
+    font-family: "Montserrat";
   }
 }
