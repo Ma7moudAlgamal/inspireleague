@@ -1,0 +1,448 @@
+@font-face {
+  font-family: "Akira";
+  src: url("/fonts/Akira.otf");
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+:root {
+  --title: rgb(200, 233, 255);
+  --secondary: #f2f2f2;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat";
+  background: rgb(1, 12, 102);
+  background: linear-gradient(
+    90deg,
+    rgba(1, 12, 102, 1) 0%,
+    rgba(47, 61, 168, 1) 100%
+  );
+  color: var(--secondary);
+  width: 100vw;
+}
+
+section {
+  padding: 6.25rem 12.5rem;
+}
+
+.section-title {
+  font-size: 2.7rem;
+  font-family: "Akira";
+  color: var(--title);
+  text-align: center;
+  margin: 4rem;
+}
+
+nav {
+  background-color: #f2f2f2;
+  padding: 0.7rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 0.5rem;
+  font-weight: bold;
+}
+
+.logo img {
+  width: 15rem;
+  margin-left: 1rem;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-right: 2.5rem;
+}
+
+li {
+  display: inline-block;
+  margin-left: 1.5rem;
+  font-size: 1.5rem;
+  font-family: "Akira";
+  transition: transform 0.3s ease-out;
+}
+
+li a {
+  text-decoration: none;
+  color: #000;
+  transition: 0.15s ease-out;
+}
+
+li:hover {
+  transform: scale(1.05);
+}
+
+li:hover a {
+  color: #07178e;
+}
+
+/* Main section */
+.main {
+  height: 100vh;
+  padding: 10rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto 1fr;
+  justify-content: center;
+  align-items: center;
+}
+
+.main h1 {
+  color: var(--title);
+  font-size: 5rem;
+  margin-bottom: 2rem;
+  font-family: "Akira";
+  grid-column: span 2;
+  grid-row: 1;
+}
+
+.main p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.7rem;
+  color: var(--secondary);
+  grid-column: 1;
+  grid-row: 2;
+  justify-self: start;
+  align-items: start;
+}
+
+.main-image {
+  width: 100%;
+  height: 100%;
+  object-fit: none;
+  justify-self: center;
+  align-self: center;
+  grid-row: 2;
+  grid-column: 2;
+}
+
+/* Match cards */
+.match-cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+/* Card styles */
+.card {
+  background-color: rgba(255, 255, 255, 0.19);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8.5px);
+  -webkit-backdrop-filter: blur(8.5px);
+  height: 200px;
+  width: 100%;
+  border-radius: 0.625rem;
+  box-shadow: 0px 0.125rem 0.3125rem rgba(0, 0, 0, 0.1);
+  padding: 1.25rem;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s;
+}
+
+.card .text-container {
+  padding: 1.25rem;
+  width: 50%;
+}
+
+.card .text-container h2 {
+  color: var(--secondary);
+  font-size: 3.2rem;
+  text-align: center;
+  margin-bottom: 0.625rem;
+  font-family: "Akira", sans-serif;
+}
+
+.card .text-container p {
+  font-size: 1.6rem;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  letter-spacing: 0.68rem;
+  color: var(--secondary);
+}
+
+.card img {
+  width: 25%;
+  height: 100%;
+  object-fit: scale-down;
+}
+
+.card:hover {
+  transform: scale(1.04);
+}
+
+/* Table styles */
+.tables {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 4rem;
+}
+
+table {
+  border-collapse: collapse;
+  background-color: var(--secondary);
+  border: none;
+  background: rgba(255, 255, 255, 0.19);
+  border-radius: 1.2rem;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8.5px);
+  -webkit-backdrop-filter: blur(8.5px);
+  transition: transform 0.2s ease-in;
+}
+
+table:hover {
+  transform: scale(1.05);
+}
+
+td {
+  padding: 1.25rem;
+  text-align: center;
+  color: var(--secondary);
+  height: 3rem;
+}
+
+th {
+  padding: 1.3rem 1rem;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 0rem;
+  border: none;
+  color: var(--title);
+}
+
+/* Video section styles */
+.vids {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 5rem;
+}
+
+.vids iframe {
+  border-radius: 1.3rem;
+}
+
+.vids .vid {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 100%;
+  gap: 2rem;
+  padding: 1.2rem;
+  transition: transform 0.2s ease-in;
+}
+
+.vids .vid h4 {
+  color: var(--secondary);
+  font-family: "Akira";
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.vid:hover {
+  transform: scale(1.05);
+}
+
+.pics {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  width: 7rem;
+  padding: 2rem;
+}
+
+.pics .pic {
+  justify-self: center;
+}
+
+.members-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1.4rem;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  width: 100%;
+}
+
+.member-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.19);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8.5px);
+  -webkit-backdrop-filter: blur(8.5px);
+  padding: 1.1rem;
+  transition: transform 0.2s ease-in;
+}
+
+.member-card img {
+  border-radius: 50%;
+  padding: 1.2rem;
+  flex-grow: 2;
+}
+
+.member-card .member-name {
+  color: var(--title);
+  font-family: "Akira";
+  padding: 1.1rem;
+  font-size: 1.3rem;
+}
+
+.member-card .member-role {
+  color: var(--secondary);
+  font-family: "Montserrat";
+  padding: 1.1rem;
+  font-weight: bolder;
+}
+
+.member-card:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+
+  section {
+    padding: 3rem 1rem;
+  }
+
+  .logo {
+    justify-self: center;
+    align-self: center;
+    object-fit: cover;
+    content: url("./images/logo\ -p.png");
+  }
+
+  .section-title {
+    font-size: 2rem;
+    margin: 3rem;
+    font-family: "Akira";
+  }
+
+  nav ul li {
+    display: none;
+  }
+
+  .main {
+    padding: 5rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+  }
+
+  .main .main-image {
+    grid-column: 1;
+    grid-row: 1;
+    width: 7rem;
+    height: auto;
+    display: none;
+  }
+
+  .main h1 {
+    grid-column: 1;
+    grid-row: 1;
+    font-size: 2.5rem;
+  }
+
+  .main p {
+    grid-column: 1;
+    grid-row: 3;
+    width: 100%;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  .card .text-container {
+    width: 100%;
+    padding: 1.2rem;
+  }
+
+  .card .text-container h2 {
+    font-size: 1.7rem;
+    padding: 1.6rem;
+    font-family: "Akira";
+  }
+
+  .card .text-container p {
+    font-size: 1rem;
+    line-height: 2rem;
+    font-family: "Montserrat";
+  }
+
+  .card .text-container p span {
+    display: none;
+  }
+
+  .card img {
+    display: none;
+  }
+
+  .tables {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .vids {
+    flex-direction: column;
+    padding: 0.5rem;
+  }
+
+  .vids .vid iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
+
+  .pics {
+    grid-template-columns: minmax(auto, 1fr);
+    gap: 1rem;
+    width: 100%;
+  }
+
+  .members-cards {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    padding: 1.7rem;
+  }
+
+  .members-cards .member-card {
+    width: 100%;
+  }
+
+  .members-cards .member-card .member-name {
+    font-size: 1.2rem;
+    font-family: "Akira";
+  }
+
+  .members-cards .member-card .member-role {
+    font-size: 1rem;
+    font-family: "Montserrat";
+  }
+}

@@ -1,6 +1,5 @@
 @import url(./brackets.css);
 
-
 @font-face {
   font-family: "Akira"; /* Choose a name for your font */
   src: url("/fonts/Akira.otf"); /* Path to the TTF file */
@@ -194,7 +193,6 @@ nav li:hover {
   transform: scale(1.04);
 }
 
-
 .tables {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -347,51 +345,6 @@ th {
   transform: scale(1.05);
 }
 
-/* 
-@media (max-width: 400px) {
-  
-  nav {
-    justify-content: center;
-
-    ul {
-      display: none;
-    }
-  } 
-
-  .main {
-    padding: 4rem;
-    /* width: 100%; 
-
-    h1 {
-      font-size: 2rem;
-    }
-
-    p {
-      font-size: 1.5;
-      grid-column: span 2;
-    }
-
-    .main-image {
-      display: none;
-    }
-  }
-
-  .upcoming-matches {
-    padding: 0.5rem;
-
-    .section-title {
-      font-size: 1.3rem;
-      padding: 3rem;
-    }
-
-    .match-cards {
-      padding: 1.2rem;
-      width: 100%;
-    }
-  }
-
-} */
-
 @media (max-width: 768px) {
   /* General adjustments */
   body {
@@ -449,7 +402,6 @@ th {
 
   /* Card section adjustments */
 
-
   .card {
     width: 100%; /* Take full width */
 
@@ -460,20 +412,19 @@ th {
       h2 {
         font-size: 1.7rem;
         padding: 1.6rem;
-        font-family: 'Akira';
+        font-family: "Akira";
       }
 
       p {
         font-size: 1rem;
         line-height: 2rem;
-        font-family: 'Montserrat';
+        font-family: "Montserrat";
         span {
           display: none;
         }
       }
     }
   }
-
 
   .card img {
     display: none;
@@ -483,49 +434,46 @@ th {
   .tables {
     grid-template-columns: 1fr; /* Switch to single-column layout */
     grid-template-rows: 1fr 1fr;
-  }
 
-  /* Videos section adjustments */
-  .vids {
-    flex-direction: column;
-    /* Stack videos vertically */
-    padding: 0.5rem;
-  }
+    /* Videos section adjustments */
+    .vids {
+      flex-direction: column;
+      /* Stack videos vertically */
+      padding: 0.5rem;
+    }
 
-  .vid iframe {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 16 / 9;
-  }
+    .vid iframe {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 16 / 9;
+    }
 
-  /* Pictures section adjustments */
-  .pics {
-    grid-template-columns: minmax(auto, 1fr);
-    gap: 1rem; /* Adjust grid layout */
-    width: 100%;
-  }
-  /* .media-team {
-  } */
-  /* Members cards section adjustments */
-  .members-cards {
-    grid-template-columns: 1fr; /* Adjust grid layout */
-    grid-template-rows: auto auto;
-    padding: 1.7rem;
-  }
+    /* Pictures section adjustments */
+    .pics {
+      grid-template-columns: minmax(auto, 1fr);
+      gap: 1rem; /* Adjust grid layout */
+      width: 100%;
+    }
 
-  .member-card {
-    width: 100%;
-    /* padding: .9rem; */
+    .members-cards {
+      grid-template-columns: 1fr; /* Adjust grid layout */
+      grid-template-rows: auto auto;
+      padding: 1.7rem;
+    }
 
-   .member-name {
-    font-size: 1.2rem;
-    font-family: 'Akira';
+    .member-card {
+      width: 100%;
+      /* padding: .9rem; */
 
-   }
+      .member-name {
+        font-size: 1.2rem;
+        font-family: "Akira";
+      }
 
-   .member-role {
-    font-size: 1rem;
-    font-family: 'Montserrat';
-   }
+      .member-role {
+        font-size: 1rem;
+        font-family: "Montserrat";
+      }
+    }
   }
 }
