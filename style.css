@@ -453,17 +453,17 @@ th {
     width: 100%;
     padding: 1.2rem;
   }
-
+/* 
   .text-container h2 {
-    font-size: 1.7rem;
-    padding: 1.6rem;
-    font-family: "Akira";
-  }
+    /* font-size: 1.7rem; */
+    /* padding: 1.6rem; */
+    /* font-family: "Akira"; 
+  } */
 
   .text-container p {
     font-size: 1rem;
     line-height: 2rem;
-    font-family: "Montserrat";
+    /* font-family: "Montserrat"; */
     span {
       display: none;
     }
