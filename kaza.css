@@ -404,6 +404,7 @@ th {
     font-size: 1.7rem;
     padding: 1.6rem;
     font-family: "Akira";
+    overflow: visible;
   }
 
   .card .text-container p {
