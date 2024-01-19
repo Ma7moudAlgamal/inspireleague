@@ -345,6 +345,51 @@ th {
   transform: scale(1.05);
 }
 
+/* 
+@media (max-width: 400px) {
+  
+  nav {
+    justify-content: center;
+
+    ul {
+      display: none;
+    }
+  } 
+
+  .main {
+    padding: 4rem;
+    /* width: 100%; 
+
+    h1 {
+      font-size: 2rem;
+    }
+
+    p {
+      font-size: 1.5;
+      grid-column: span 2;
+    }
+
+    .main-image {
+      display: none;
+    }
+  }
+
+  .upcoming-matches {
+    padding: 0.5rem;
+
+    .section-title {
+      font-size: 1.3rem;
+      padding: 3rem;
+    }
+
+    .match-cards {
+      padding: 1.2rem;
+      width: 100%;
+    }
+  }
+
+} */
+
 @media (max-width: 768px) {
   /* General adjustments */
   body {
@@ -355,12 +400,17 @@ th {
     padding: 3rem 1rem; /* Reduce padding */
   }
 
+  nav {
+    justify-content: center;
+  }
+
   .logo {
     justify-self: center;
     align-self: center;
-    /* width: 5rem; */
+    width: 10rem;
     object-fit: cover;
-    content: url("./images/logo\ -p.png");
+    /* content: url("./images/logo\ -p.png"); */
+    content: url("./images/logo\ -p2.png");
   }
 
   .section-title {
@@ -380,10 +430,6 @@ th {
     grid-template-rows: auto auto;
 
     .main-image {
-      grid-column: 1;
-      grid-row: 1;
-      width: 7rem;
-      height: auto; /* Adjust height as needed */
       display: none;
     }
 
@@ -434,46 +480,48 @@ th {
   .tables {
     grid-template-columns: 1fr; /* Switch to single-column layout */
     grid-template-rows: 1fr 1fr;
+  }
 
-    /* Videos section adjustments */
-    .vids {
-      flex-direction: column;
-      /* Stack videos vertically */
-      padding: 0.5rem;
+  /* Videos section adjustments */
+  .vids {
+    flex-direction: column;
+    /* Stack videos vertically */
+    padding: 0.5rem;
+  }
+
+  .vid iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
+
+  /* Pictures section adjustments */
+  .pics {
+    grid-template-columns: minmax(auto, 1fr);
+    gap: 1rem; /* Adjust grid layout */
+    width: 100%;
+  }
+  /* .media-team {
+  } */
+  /* Members cards section adjustments */
+  .members-cards {
+    grid-template-columns: 1fr; /* Adjust grid layout */
+    grid-template-rows: auto auto;
+    padding: 1.7rem;
+  }
+
+  .member-card {
+    width: 100%;
+    /* padding: .9rem; */
+
+    .member-name {
+      font-size: 1.2rem;
+      font-family: "Akira";
     }
 
-    .vid iframe {
-      width: 100%;
-      height: auto;
-      aspect-ratio: 16 / 9;
-    }
-
-    /* Pictures section adjustments */
-    .pics {
-      grid-template-columns: minmax(auto, 1fr);
-      gap: 1rem; /* Adjust grid layout */
-      width: 100%;
-    }
-
-    .members-cards {
-      grid-template-columns: 1fr; /* Adjust grid layout */
-      grid-template-rows: auto auto;
-      padding: 1.7rem;
-    }
-
-    .member-card {
-      width: 100%;
-      /* padding: .9rem; */
-
-      .member-name {
-        font-size: 1.2rem;
-        font-family: "Akira";
-      }
-
-      .member-role {
-        font-size: 1rem;
-        font-family: "Montserrat";
-      }
+    .member-role {
+      font-size: 1rem;
+      font-family: "Montserrat";
     }
   }
 }

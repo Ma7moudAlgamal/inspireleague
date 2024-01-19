@@ -332,11 +332,16 @@ th {
     padding: 3rem 1rem;
   }
 
+  nav {
+    justify-content: center;
+  }
+
   .logo {
     justify-self: center;
     align-self: center;
+    width: 10rem;
     object-fit: cover;
-    content: url("./images/logo\ -p.png");
+    content: url("./images/logo\ -p2.png");
   }
 
   .section-title {
@@ -356,10 +361,6 @@ th {
   }
 
   .main .main-image {
-    grid-column: 1;
-    grid-row: 1;
-    width: 7rem;
-    height: auto;
     display: none;
   }
 
