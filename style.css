@@ -405,15 +405,16 @@ th {
   .logo {
     justify-self: center;
     align-self: center;
-    width: 100%;
+    width: 5rem;
     object-fit: cover;
-    content: url("./images/logo\ -p.png");
+    /* content: url("./images/logo\ -p.png"); */
   }
 
   .section-title {
     font-size: 2rem;
     /* text-align: center; */
     margin: 3rem;
+    font-family: "Akira";
   }
   nav ul li {
     display: none; /* Decrease spacing between nav items */
@@ -459,12 +460,13 @@ th {
       h2 {
         font-size: 1.7rem;
         padding: 1.6rem;
+        font-family: 'Akira';
       }
 
       p {
         font-size: 1rem;
         line-height: 2rem;
-
+        font-family: 'Montserrat';
         span {
           display: none;
         }
@@ -514,5 +516,16 @@ th {
   .member-card {
     width: 100%;
     /* padding: .9rem; */
+
+   .member-name {
+    font-size: 1.2rem;
+    font-family: 'Akira';
+
+   }
+
+   .member-role {
+    font-size: 1rem;
+    font-family: 'Montserrat';
+   }
   }
 }
