@@ -1,3 +1,6 @@
+@import url(./brackets.css);
+
+
 @font-face {
   font-family: "Akira"; /* Choose a name for your font */
   src: url("/fonts/Akira.otf"); /* Path to the TTF file */
@@ -190,6 +193,7 @@ nav li:hover {
 .card:hover {
   transform: scale(1.04);
 }
+
 
 .tables {
   display: grid;
