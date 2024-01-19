@@ -429,7 +429,7 @@ th {
     .main-image {
       grid-column: 1;
       grid-row: 1;
-      width: 7rem;
+      width: 5rem;
       height: auto; /* Adjust height as needed */
       display: none;
     }
