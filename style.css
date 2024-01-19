@@ -8,10 +8,10 @@
   display: none;
 }
 
-
 :root {
   --title: rgb(200, 233, 255);
   --secondary: #f2f2f2;
+  /* font-size: 10px; */
 }
 
 * {
@@ -28,6 +28,8 @@ body {
     rgba(1, 12, 102, 1) 0%,
     rgba(47, 61, 168, 1) 100%
   );
+  color: var(--secondary);
+  width: 100vw;
 }
 
 section {
@@ -100,7 +102,7 @@ nav li:hover {
 
   .main-image {
     /* max-width: 30%; */
-    grid-row: 1 / span 2;
+    grid-row: 2;
     grid-column: 2;
     object-fit: none;
     justify-self: center;
@@ -114,7 +116,7 @@ nav li:hover {
     font-size: 5rem;
     margin-bottom: 2rem;
     font-family: "Akira";
-    grid-column: 1;
+    grid-column: span 2;
     grid-row: 1;
   }
 
@@ -293,7 +295,6 @@ th {
   }
 }
 
-
 .members-cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -325,14 +326,14 @@ th {
 
   .member-name {
     color: var(--title);
-    font-family: 'Akira';
+    font-family: "Akira";
     padding: 1.1rem;
     font-size: 1.3rem;
   }
 
   .member-role {
     color: var(--secondary);
-    font-family: 'Montserrat';
+    font-family: "Montserrat";
     padding: 1.1rem;
     font-weight: bolder;
   }
@@ -340,4 +341,171 @@ th {
 
 .member-card:hover {
   transform: scale(1.05);
+}
+
+/* 
+@media (max-width: 400px) {
+  
+  nav {
+    justify-content: center;
+
+    ul {
+      display: none;
+    }
+  } 
+
+  .main {
+    padding: 4rem;
+    /* width: 100%; 
+
+    h1 {
+      font-size: 2rem;
+    }
+
+    p {
+      font-size: 1.5;
+      grid-column: span 2;
+    }
+
+    .main-image {
+      display: none;
+    }
+  }
+
+  .upcoming-matches {
+    padding: 0.5rem;
+
+    .section-title {
+      font-size: 1.3rem;
+      padding: 3rem;
+    }
+
+    .match-cards {
+      padding: 1.2rem;
+      width: 100%;
+    }
+  }
+
+} */
+
+@media (max-width: 768px) {
+  /* General adjustments */
+  body {
+    font-size: 14px; /* Adjust base font size for smaller screens */
+  }
+
+  section {
+    padding: 3rem 1rem; /* Reduce padding */
+  }
+
+  .logo {
+    justify-self: center;
+    align-self: center;
+  }
+
+  .section-title {
+    font-size: 2rem;
+    /* text-align: center; */
+    margin: 3rem;
+  }
+  nav ul li {
+    display: none; /* Decrease spacing between nav items */
+  }
+
+  /* Main section adjustments */
+  .main {
+    padding: 5rem; /* Reduce padding */
+    grid-template-columns: 1fr; /* Switch to single-column layout */
+    grid-template-rows: auto auto;
+
+    .main-image {
+      grid-column: 1;
+      grid-row: 1;
+      width: 100%;
+      height: auto; /* Adjust height as needed */
+      display: none;
+    }
+
+    h1 {
+      grid-column: 1;
+      grid-row: 1;
+      font-size: 2.5rem;
+    }
+
+    p {
+      grid-column: 1;
+      grid-row: 3;
+      width: 100%; /* Take full width */
+    }
+  }
+
+  /* Card section adjustments */
+
+
+  .card {
+    width: 100%; /* Take full width */
+
+    .text-container {
+      width: 100%;
+      padding: 1.2rem;
+
+      h2 {
+        font-size: 1.7rem;
+        padding: 1.6rem;
+      }
+
+      p {
+        font-size: 1rem;
+        line-height: 2rem;
+
+        span {
+          display: none;
+        }
+      }
+    }
+  }
+
+
+  .card img {
+    display: none;
+  }
+
+  /* Table section adjustments */
+  .tables {
+    grid-template-columns: 1fr; /* Switch to single-column layout */
+    grid-template-rows: 1fr 1fr;
+  }
+
+  /* Videos section adjustments */
+  .vids {
+    flex-direction: column;
+    /* Stack videos vertically */
+    padding: 0.5rem;
+  }
+
+  .vid iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
+
+  /* Pictures section adjustments */
+  .pics {
+    grid-template-columns: minmax(auto, 1fr);
+    gap: 1rem; /* Adjust grid layout */
+    width: 100%;
+  }
+  /* .media-team {
+  } */
+  /* Members cards section adjustments */
+  .members-cards {
+    grid-template-columns: 1fr; /* Adjust grid layout */
+    grid-template-rows: auto auto;
+    padding: 1.7rem;
+  }
+
+  .member-card {
+    width: 100%;
+    /* padding: .9rem; */
+  }
 }
