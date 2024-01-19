@@ -405,6 +405,8 @@ th {
   .logo {
     justify-self: center;
     align-self: center;
+    width: 100%;
+    object-fit: cover;
   }
 
   .section-title {
