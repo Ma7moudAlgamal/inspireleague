@@ -375,6 +375,7 @@ th {
     grid-row: 3;
     width: 100%;
     font-size: .9rem;
+    margin-left: .8rem;
   }
 
   .card {
