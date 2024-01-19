@@ -407,6 +407,7 @@ th {
     align-self: center;
     width: 100%;
     object-fit: cover;
+    content: url("./images/logo\ -p.png");
   }
 
   .section-title {
