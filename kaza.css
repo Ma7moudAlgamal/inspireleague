@@ -396,6 +396,10 @@ th {
   color: #F3A950;
 }
 
+.fekratee .short {
+  display: none;
+}
+
 .fekratee p {
   font-size: 2rem;
   font-family: "Montserrat";
@@ -637,6 +641,13 @@ footer .social-icons i {
     font-size: 2rem;
   }
 
+  .fekratee .long {
+    display: none;
+  }
+
+  .fekratee .short {
+    display: block;
+  }
 
   .fekratee p {
     font-size: 1.5rem;
@@ -645,7 +656,7 @@ footer .social-icons i {
 
   .fekratee a {
     font-size: 1.5rem;
-    
+
   }
 
   footer {
