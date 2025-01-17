@@ -47,7 +47,12 @@ section {
 }
 
 nav {
-  background-color: #f2f2f2;
+  background: rgb(1, 12, 102);
+  background-color: linear-gradient(
+    90deg,
+    rgba(1, 12, 102, 1) 0%,
+    rgba(47, 61, 168, 1) 100%
+  );
   padding: 0.7rem;
   display: flex;
   justify-content: space-between;

@@ -1,10 +1,13 @@
 @import url(./brackets.css);
 
-
-
 @font-face {
   font-family: "Akira";
   src: url("/fonts/Akira.otf");
+}
+
+@font-face {
+  font-family: "Fekratee";
+  src: url("/fonts/MontserratAlt1-Bold.ttf");
 }
 
 ::-webkit-scrollbar {
@@ -47,7 +50,12 @@ section {
 }
 
 nav {
-  background-color: #f2f2f2;
+  background: rgb(1, 12, 102);
+  background: linear-gradient(
+    90deg,
+    rgba(1, 12, 102, 1) 0%,
+    rgba(47, 61, 168, 1) 100%
+  );
   padding: 0.7rem;
   display: flex;
   justify-content: space-between;
@@ -109,9 +117,11 @@ li:hover a {
 .main {
   height: 100vh;
   /* padding: 10rem; */
-  display: grid;
-  grid-template-columns: auto 50%;
-  grid-template-rows: auto auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  /* grid-template-columns: auto 50%;
+  grid-template-rows: auto auto; */
   justify-content: center;
   align-items: center;
   padding-top: 2rem;
@@ -119,14 +129,16 @@ li:hover a {
 
 .main h1 {
   color: var(--title);
-  font-size: 5rem;
+  font-size: 7rem;
   /* margin-bottom: 5rem; */
   /* margin-bottom: 2rem; */
-  justify-self: start;
-  align-self: end;
-  font-family: "Akira";
-  grid-column: 1;
-  grid-row: 1;
+  /* justify-self: ce;
+  align-self: end; */
+  align-self: flex-start;
+  font-family: "Montserrat";
+  font-weight: 900;
+  /* grid-column: 1;
+  grid-row: 1; */
   /* padding-left: 1rem;
   */
   margin-left: 0rem;
@@ -136,13 +148,14 @@ li:hover a {
 
 .main p {
   font-family: "Montserrat", sans-serif;
-  font-size: 1.7rem;
+  font-weight: 600;
+  font-size: 3.5rem;
   color: var(--secondary);
-  grid-column: 1;
-  grid-row: 2;
-  justify-self: start;
-  align-items: start;
-  line-height: 2.7rem;
+  /* grid-column: 1;
+  grid-row: 2; */
+  /* justify-self: start;
+  align-items: start; */
+  line-height: 4rem;
   /* margin-top: -7rem; */
 }
 
@@ -261,15 +274,17 @@ th {
   color: var(--title);
 }
 
-
-
+.latest-vids {
+  padding: 2rem;
+}
 
 /* Video section styles */
 .vids {
   display: flex;
   justify-content: space-evenly;
-  align-items: center;
-  padding: 5rem;
+  align-items: start;
+  padding: 2rem;
+  /* flex-wrap: wrap; */
 }
 
 .vids iframe {
@@ -346,7 +361,7 @@ th {
 .member-card .member-name {
   color: var(--title);
   font-family: "Akira";
-  padding: 1.1rem  .0rem;
+  padding: 1.1rem 0rem;
   font-size: 1.3rem;
   overflow: hidden;
 }
@@ -362,12 +377,62 @@ th {
   transform: scale(1.05);
 }
 
+.fekratee {
+  background-image: url(./images/fekratee.png);
+  background-repeat: no-repeat;
+  padding-bottom: 0.5rem;
+  
+}
+
+.fekratee .content {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  width: 50%;
+}
+.fekratee .content h3 {
+  font-size: 4rem;
+  font-family: "Fekratee";
+  color: #F3A950;
+}
+
+.fekratee p {
+  font-size: 2rem;
+  font-family: "Montserrat";
+  font-weight: 400;
+  line-height: 2.5rem;
+}
+
+.fekratee span {
+  color: #F3A950;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.fekratee a {
+  width: fit-content;
+  display: inline-block;
+  
+  padding: 1rem;
+  background-color: #F3A950;
+  border-radius: .5rem;
+  color: white;
+  text-decoration: none;
+  font-family: "Fekratee";
+  font-size: 2rem;
+  transition: .5s ease-out all;
+}
+
+.fekratee a:hover {
+  transform: scale(1.05);
+}
+
 footer {
   display: grid;
   justify-content: space-between;
   grid-template-columns: 70% 30%;
-  padding: 2rem;
-  background-color: #000;
+  padding: 3rem 2rem;
+  background-color: #161B21;
   overflow: hidden;
 }
 
@@ -423,7 +488,7 @@ footer .social-icons i {
     align-self: center;
     width: 10rem;
     object-fit: cover;
-    content: url("./images/logo\ -p2.png");
+    content: url("./images/New\ Logo.png");
     margin-left: 0;
     /* margin-left: 1rem; */
   }
@@ -439,9 +504,12 @@ footer .social-icons i {
   }
 
   .main {
-    padding: 6rem;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto;
+    display: grid;
+
+    padding: 0 2rem;
+    /* grid-template-columns: 1fr;
+    grid-template-rows: auto auto; */
+    align-items: start;
     margin-bottom: 2rem;
     /* display: none; */
   }
@@ -451,9 +519,11 @@ footer .social-icons i {
   }
 
   .main h1 {
-    grid-column: 1;
-    grid-row: 1;
-    font-size: 2.5rem;
+    /* grid-column: 1;
+    grid-row: 1; */
+    align-self: center;
+    font-size: 3rem;
+    font-weight: 900;
   }
 
   .main p {
@@ -462,14 +532,12 @@ footer .social-icons i {
     width: 100%;
     /* content:""; */
     font-size: 1.5rem;
-    font-weight: bolder;
-    padding: 1.8rem .9rem;
+    font-weight: 400;
+    padding: 0.9rem 0.9rem;
     margin-top: 0rem;
     /* margin-left: .8rem; */
     /* margin-bottom: 2rem; */
     line-height: 2rem;
-
-    
   }
 
   .larger-screen {
@@ -542,7 +610,6 @@ footer .social-icons i {
     width: 100%;
   }
 
-
   .member-card img {
     width: 250px;
     aspect-ratio: 1;
@@ -556,6 +623,30 @@ footer .social-icons i {
     font-size: 1rem;
     font-family: "Montserrat";
   }
+  .fekratee {
+    background-image: url(./images/fekratee\ -p.png);
+    background-clip: padding-box;
+    
+  }
+
+  .fekratee .content {
+    width: 100%;
+  }
+
+  .fekratee h3 {
+    font-size: 2rem;
+  }
+
+
+  .fekratee p {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .fekratee a {
+    font-size: 1.5rem;
+    
+  }
 
   footer {
     padding: 3rem;
@@ -568,7 +659,7 @@ footer .social-icons i {
     grid-template-columns: 1fr 1fr;
     grid-row: auto auto auto;
   }
-  
+
   .footercopy {
     font-size: 1.6rem;
   }
