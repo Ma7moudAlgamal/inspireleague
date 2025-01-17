@@ -446,12 +446,13 @@ footer {
 }
 
 footer h3 {
-  color: white;
+  color: #F3A950;
+  /* color: white; */
   font-size: 30px;
 }
 
 footer h3 span {
-  color: var(--title);
+  /* color: var(--title); */
 }
 
 footer .social-icons {
@@ -465,7 +466,9 @@ footer .social-icons i {
   font-size: 1.5rem;
   /* margin: 10px; */
   height: auto;
-  color: var(--title);
+  /* color: var(--title); */
+  color: #F3A950;
+
   transition: all 0.2s ease-in-out;
 }
 .social-icons i:hover {
