@@ -258,6 +258,11 @@ table:hover {
   transform: scale(1.05);
 }
 
+td:first-child {
+  font-family: "Montserrat";
+  font-weight: 900;
+}
+
 td {
   padding: 1.25rem;
   text-align: center;
